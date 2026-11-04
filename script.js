@@ -79,7 +79,7 @@
     try {
       await friendshipAudio.play();
     } catch (error) {
-      showToast('Music could not load. Check media/jaane-kyun.mp3 is included.');
+      showToast('Music could not load. Check that jaane-kyun.mp3 is beside index.html.');
     }
   });
 
@@ -87,7 +87,7 @@
   friendshipAudio.addEventListener('pause', syncMusicControl);
   friendshipAudio.addEventListener('ended', syncMusicControl);
   friendshipAudio.addEventListener('error', () => {
-    showToast('Music file unavailable. Keep jaane-kyun.mp3 inside the media folder.');
+    showToast('Music file unavailable. Keep jaane-kyun.mp3 beside index.html.');
     syncMusicControl();
   });
   syncMusicControl();
